@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KaamChaluERP - Dashboard</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Courier New", monospace;
+}
+
+body{
+display:flex;
+height:100vh;
+background:#fff;
+color:#000;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+border-right:1px solid #000;
+padding:30px 20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.logo{
+font-size:18px;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:40px;
+}
+
+.menu a{
+display:block;
+text-decoration:none;
+color:#000;
+margin-bottom:20px;
+font-size:14px;
+text-transform:uppercase;
+padding:8px;
+border:1px solid transparent;
+transition:0.3s;
+}
+
+.menu a.active{
+border:1px solid #000;
+background:#f5f5f5;
+}
+
+.menu a:hover{
+border:1px solid #000;
+}
+
+.logout{
+text-decoration:none;
+text-align:center;
+padding:10px;
+border:1px solid #000;
+text-transform:uppercase;
+font-size:13px;
+color:#000;
+}
+
+.logout:hover{
+background:#000;
+color:#fff;
+}
+
+/* MAIN CONTENT */
+
+.main{
+flex:1;
+padding:50px;
+overflow:auto;
+}
+
+.header{
+font-size:28px;
+margin-bottom:40px;
+text-transform:uppercase;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-bottom:40px;
+}
+
+.card{
+padding:35px;
+border:1px solid #000;
+box-shadow:6px 6px 0px #000;
+}
+
+.card h3{
+font-size:14px;
+margin-bottom:15px;
+text-transform:uppercase;
+}
+
+.card p{
+font-size:28px;
+font-weight:bold;
+}
+
+/* TABLE */
+
+.section-title{
+font-size:18px;
+margin:40px 0 15px;
+text-transform:uppercase;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:30px;
+}
+
+th, td{
+border-bottom:1px solid #000;
+padding:12px;
+text-align:left;
+}
+
+th{
+font-size:13px;
+letter-spacing:1px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div>
+<div class="logo">KaamChaluERP</div>
+
+<div class="menu">
+<a href="#" class="active">Dashboard</a>
+<a href="employees.html">Employees</a>
+<a href="inventory.html">Inventory</a>
+<a href="reports.html">Reports</a>
+</div>
+</div>
+
+<a href="index.html" class="logout">Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">System Dashboard</div>
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="card">
+<h3>Total Employees</h3>
+<p>125</p>
+</div>
+
+<div class="card">
+<h3>Active Projects</h3>
+<p>18</p>
+</div>
+
+<div class="card">
+<h3>Monthly Revenue</h3>
+<p>₹ 4.2L</p>
+</div>
+
+<div class="card">
+<h3>Total Inventory Items</h3>
+<p>320</p>
+</div>
+
+<div class="card">
+<h3>Low Stock Items</h3>
+<p>12</p>
+</div>
+
+<div class="card">
+<h3>Total Suppliers</h3>
+<p>24</p>
+</div>
+
+<div class="card">
+<h3>Pending Orders</h3>
+<p>9</p>
+</div>
+
+<div class="card">
+<h3>Total Sales</h3>
+<p>₹ 18.6L</p>
+</div>
+
+</div>
+
+<!-- RECENT EMPLOYEES -->
+
+<div class="section-title">Recent Employees</div>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Username</th>
+<th>Email</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>demo</td>
+<td>demo@email.com</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>ali</td>
+<td>ali@email.com</td>
+</tr>
+
+ <!-- 
+<tr>
+<td>3</td>
+<td>Rahul</td>
+<td>rahul@email.com</td>
+</tr>
+-->
+
+</table>
+
+<!-- INVENTORY SUMMARY -->
+
+<div class="section-title">Inventory Summary</div>
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Total</th>
+</tr>
+
+<tr>
+<td>Laptop</td>
+<td>15</td>
+<td>₹80000</td>
+<td>₹1200000</td>
+</tr>
+
+<tr>
+<td>Mouse</td>
+<td>50</td>
+<td>₹500</td>
+<td>₹25000</td>
+</tr>
+
+<tr>
+<td>Keyboard</td>
+<td>30</td>
+<td>₹1500</td>
+<td>₹45000</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

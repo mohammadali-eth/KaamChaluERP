@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KaamChaluERP - Insert Inventory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Courier New", monospace;
+}
+
+body{
+display:flex;
+height:100vh;
+background:#ffffff;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+border-right:1px solid #000;
+padding:30px 20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.logo{
+font-size:18px;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:40px;
+}
+
+.menu a{
+display:block;
+text-decoration:none;
+color:#000;
+margin-bottom:20px;
+font-size:14px;
+text-transform:uppercase;
+padding:8px;
+border:1px solid transparent;
+}
+
+.menu a:hover{
+border:1px solid #000;
+}
+
+.menu a.active{
+border:1px solid #000;
+background:#f5f5f5;
+}
+
+.logout{
+text-decoration:none;
+text-align:center;
+padding:10px;
+border:1px solid #000;
+text-transform:uppercase;
+font-size:13px;
+color:#000;
+}
+
+.logout:hover{
+background:#000;
+color:#fff;
+}
+
+/* MAIN CONTENT */
+
+.main{
+flex:1;
+padding:50px;
+}
+
+.header{
+font-size:26px;
+margin-bottom:30px;
+text-transform:uppercase;
+}
+
+/* FORM CARD */
+
+.card{
+width:400px;
+padding:30px;
+border:1px solid #000;
+box-shadow:8px 8px 0px #000;
+background:#fff;
+}
+
+/* FORM */
+
+label{
+display:block;
+margin-top:15px;
+font-size:13px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid #000;
+}
+
+button{
+margin-top:20px;
+padding:10px;
+border:1px solid #000;
+background:#fff;
+cursor:pointer;
+text-transform:uppercase;
+}
+
+button:hover{
+background:#000;
+color:#fff;
+}
+.back-btn{
+margin-top:10px;
+padding:10px;
+border:1px solid #000;
+background:#fff;
+cursor:pointer;
+text-transform:uppercase;
+}
+
+.back-btn:hover{
+background:#000;
+color:#fff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div>
+
+<div class="logo">KAAMCHALUERP</div>
+
+<div class="menu">
+<a href="deshboard.html">Dashboard</a>
+<a href="employees.html">Employees</a>
+<a href="inventory.html" class="active">Inventory</a>
+<a href="reports.html">Reports</a>
+</div>
+
+</div>
+
+<a href="index.html" class="logout">Logout</a>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main">
+
+<div class="header">Insert Inventory Item</div>
+
+<div class="card">
+
+<form action="insertItem" method="post">
+
+<label>Item Name</label>
+<input type="text" name="itemName" required>
+
+<label>Quantity</label>
+<input type="number" name="quantity" required>
+
+<label>Price</label>
+<input type="number" name="price" required>
+
+<button type="submit">Insert Item</button>
+
+<button type="button" class="back-btn" onclick="location.href='inventory.html'">
+Back
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

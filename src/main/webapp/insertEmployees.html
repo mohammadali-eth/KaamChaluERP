@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KaamChaluERP - Insert Employee</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Courier New", monospace;
+}
+
+body{
+display:flex;
+height:100vh;
+background:#ffffff;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+border-right:1px solid #000;
+padding:30px 20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.logo{
+font-size:18px;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:40px;
+}
+
+.menu a{
+display:block;
+text-decoration:none;
+color:#000;
+margin-bottom:20px;
+font-size:14px;
+text-transform:uppercase;
+padding:8px;
+border:1px solid transparent;
+}
+
+.menu a:hover{
+border:1px solid #000;
+}
+
+.menu a.active{
+border:1px solid #000;
+background:#f5f5f5;
+}
+
+.logout{
+text-decoration:none;
+text-align:center;
+padding:10px;
+border:1px solid #000;
+text-transform:uppercase;
+font-size:13px;
+color:#000;
+}
+
+.logout:hover{
+background:#000;
+color:#fff;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:50px;
+}
+
+.header{
+font-size:26px;
+margin-bottom:30px;
+text-transform:uppercase;
+}
+
+/* FORM CARD */
+
+.card{
+width:420px;
+padding:30px;
+border:1px solid #000;
+box-shadow:8px 8px 0px #000;
+background:#fff;
+}
+
+/* FORM */
+
+label{
+display:block;
+margin-top:15px;
+font-size:13px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid #000;
+}
+
+button{
+margin-top:20px;
+padding:10px;
+border:1px solid #000;
+background:#fff;
+cursor:pointer;
+text-transform:uppercase;
+}
+
+button:hover{
+background:#000;
+color:#fff;
+}
+
+.back-btn{
+margin-left:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div>
+
+<div class="logo">KAAMCHALUERP</div>
+
+<div class="menu">
+<a href="deshboard.html">Dashboard</a>
+<a href="employees.html" class="active">Employees</a>
+<a href="inventory.html">Inventory</a>
+<a href="reports.html">Reports</a>
+</div>
+
+</div>
+
+<a href="index.html" class="logout">Logout</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main">
+
+<div class="header">Insert Employee</div>
+
+<div class="card">
+
+<form action="employees" method="post">
+
+<label>Username</label>
+<input type="text" name="username" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Password</label>
+<input type="password" name="password" required>
+
+<button type="submit">Insert Employee</button>
+
+<button type="button" class="back-btn" onclick="location.href='employees.html'">
+Back
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

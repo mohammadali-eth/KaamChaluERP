@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KaamChaluERP - Home</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    border-bottom: 1px solid #000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;	
+    margin-left: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid transparent;
+    padding: 8px 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border: 1px solid #000;
+}
+
+/* HERO */
+.hero {
+    padding: 120px 80px;
+    border-bottom: 1px solid #000;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* GRID FEATURE SECTION */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #000;
+}
+
+.feature-item {
+    padding: 60px;
+    border-right: 1px solid #000;
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.feature-item p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px 80px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        border-right: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .feature-item:last-child {
+        border-bottom: none;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KaamChalu <span style="color: #F68048">ERP.</span></div>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Register</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Decentralized Thinking.<br>Centralized Control.</h1>
+    <p>
+        KaamChaluERP delivers enterprise-grade operational control with a
+        blockchain-inspired architecture. Structured data flow. Transparent
+        reporting. Immutable performance tracking. Built for modern digital businesses.
+    </p>
+</section>
+
+<section class="features">
+    <div class="feature-item">
+        <h3>01 — Workforce Ledger</h3>
+        <p>
+            Track attendance, salaries, and performance logs with structured,
+            tamper-resistant system architecture.
+        </p>
+    </div>
+
+    <div class="feature-item">
+        <h3>02 — Inventory Chain</h3>
+        <p>
+            Real-time asset flow management with precise control over supply,
+            stock levels, and distribution channels.
+        </p>
+    </div>
+
+    <div class="feature-item">
+        <h3>03 — Financial Transparency</h3>
+        <p>
+            Generate secure reports and maintain accountability across all
+            operational transactions.
+        </p>
+    </div>
+</section>
+<footer>
+    © 2026 KAAMCHALU ERP — SYSTEM PROTOCOL ACTIVE
+</footer>
+
+</body>
+</html>
