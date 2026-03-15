@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KaamChaluERP - Home</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+min-height:100vh;
+line-height:1.6;
+}
+
+/* ===== GRID BACKGROUND ===== */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background-image:
+linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+background-size:50px 50px;
+z-index:-1;
+}
+
+/* ===== CONTAINER ===== */
+
+.container{
+width:92%;
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:50px;
+}
+
+.navbar h2{
+letter-spacing:1px;
+font-weight:600;
+}
+
+.navbar a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+opacity:0.8;
+font-size:14px;
+}
+
+.navbar a:hover{
+opacity:1;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+text-align:center;
+margin-bottom:60px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+opacity:0.8;
+}
+
+/* ===== BUTTON ===== */
+
+button{
+margin-top:25px;
+padding:12px 26px;
+border:none;
+background:#fff;
+color:#000;
+font-weight:600;
+cursor:pointer;
+border-radius:6px;
+transition:0.25s;
+}
+
+button:hover{
+transform:translateY(-2px);
+background:#e5e5e5;
+}
+
+/* ===== FEATURES ===== */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.feature-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+padding:25px;
+border-radius:10px;
+transition:0.25s;
+}
+
+.feature-card:hover{
+border-color:#fff;
+}
+
+/* ===== ABOUT ===== */
+
+.about{
+margin-top:50px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+padding:30px;
+border-radius:10px;
+}
+
+.about h3{
+margin-bottom:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="navbar">
+<h2>KaamChaluERP</h2>
+
+<div>
+<a href="login.html">Login</a>
+<a href="registration.html">Register</a>
+</div>
+</div>
+
+<div class="hero">
+
+<h1>Manage Your Business Smartly</h1>
+
+<p>
+KaamChaluERP is a lightweight system that helps businesses manage
+staff, track inventory, and organize daily operations efficiently.
+Everything you need to manage your store from one simple dashboard.
+</p>
+
+<a href="login.html">
+<button>Start Using System</button>
+</a>
+
+</div>
+
+<div class="features">
+
+<div class="feature-card">
+<h3>Staff Management</h3>
+<p>Maintain employee records, roles, and contact information easily.</p>
+</div>
+
+<div class="feature-card">
+<h3>Inventory Tracking</h3>
+<p>Track product quantities, categories, and suppliers in one place.</p>
+</div>
+
+<div class="feature-card">
+<h3>Purchase Records</h3>
+<p>Monitor product purchases and supplier information quickly.</p>
+</div>
+
+<div class="feature-card">
+<h3>Secure Login</h3>
+<p>User authentication ensures your business data remains protected.</p>
+</div>
+
+</div>
+
+<div class="about">
+
+<h3>About the System</h3>
+
+<p>
+KaamChaluERP helps small businesses simplify their operations.
+It allows store owners to manage staff information, track inventory,
+and monitor product purchases with a clean and simple interface.
+The system is designed for speed, simplicity, and productivity.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

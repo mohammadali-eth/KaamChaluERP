@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inventory - KaamChaluERP</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="navbar">
+<h2>KaamChaluERP</h2>
+<a href="dashboard">Dashboard</a>
+</div>
+
+<div class="card">
+
+<h2>Add / Edit Inventory</h2>
+
+<form action="inventory" method="post">
+
+<input type="hidden" name="id" id="id">
+
+<label>Item Name</label>
+<input type="text" name="item" id="item">
+
+<label>Category</label>
+<select name="category" id="category">
+<option>Electronics</option>
+<option>Furniture</option>
+<option>Stationary</option>
+</select>
+
+<label>Quantity</label>
+<input type="number" name="qty" id="qty">
+
+<label>Price</label>
+<input type="number" name="price" id="price">
+
+<label>Supplier</label>
+<input type="text" name="supplier" id="supplier">
+
+<label>Purchase Type</label>
+
+<div style="margin-top:8px;">
+<input type="radio" name="ptype" value="Online"> Online
+<input type="radio" name="ptype" value="Offline"> Offline
+</div>
+
+<br>
+
+<button id="btn" type="submit">Save Inventory</button>
+
+</form>
+
+<br>
+
+<a href="dashboard">← Back to Dashboard</a>
+
+</div>
+
+</div>
+
+<script>
+
+const p = new URLSearchParams(window.location.search);
+
+document.getElementById("id").value = p.get("id") || "";
+document.getElementById("item").value = p.get("item") || "";
+document.getElementById("category").value = p.get("category") || "";
+document.getElementById("qty").value = p.get("qty") || "";
+document.getElementById("price").value = p.get("price") || "";
+document.getElementById("supplier").value = p.get("supplier") || "";
+
+</script>
+
+</body>
+</html>

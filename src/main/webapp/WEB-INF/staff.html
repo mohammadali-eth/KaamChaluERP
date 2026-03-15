@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Staff - KaamChaluERP</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="navbar">
+<h2>KaamChaluERP</h2>
+<a href="dashboard">Dashboard</a>
+</div>
+
+<div class="card">
+
+<h2>Add / Edit Staff</h2>
+
+<form action="staff" method="post">
+
+<input type="hidden" name="id" id="id">
+
+<label>Name</label>
+<input type="text" name="name" id="name">
+
+<label>Email</label>
+<input type="email" name="email" id="email">
+
+<label>Phone</label>
+<input type="text" name="phone" id="phone">
+
+<label>Role</label>
+<select name="role" id="role">
+<option>Manager</option>
+<option>Store Keeper</option>
+<option>Sales</option>
+</select>
+
+<br>
+
+<button type="submit">Save Staff</button>
+
+</form>
+
+<br>
+
+<a href="dashboard">← Back to Dashboard</a>
+
+</div>
+
+</div>
+
+<script>
+
+const p = new URLSearchParams(window.location.search);
+
+document.getElementById("id").value = p.get("id") || "";
+document.getElementById("name").value = p.get("name") || "";
+document.getElementById("email").value = p.get("email") || "";
+document.getElementById("phone").value = p.get("phone") || "";
+document.getElementById("role").value = p.get("role") || "";
+
+</script>
+
+</body>
+</html>
