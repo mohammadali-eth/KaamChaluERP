@@ -140,4 +140,36 @@
 	    <servlet-name>EditStaff</servlet-name>
 	    <url-pattern>/editStaff</url-pattern>
 	</servlet-mapping>
+	
+	<!-- ============================= -->
+	 <!-- Get Header Servlet -->
+	 <!-- ============================= -->
+	<servlet>
+	    <servlet-name>GetHeaderServlet</servlet-name>
+	    <servlet-class>GetHeader.GetHeader</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>GetHeaderServlet</servlet-name>
+	    <url-pattern>/getHeader</url-pattern>
+	</servlet-mapping>
+	
+		 <!-- ============================= -->
+	 <!-- WebXml Servlet -->
+	 <!-- ============================= -->
+	<servlet>
+	    <servlet-name>WebXmlServlet</servlet-name>
+	    <servlet-class>WebXml.WebXml</servlet-class>
+	    
+	<init-param>
+        <param-name>author</param-name>
+        <param-value>Mohammadali Dhanga</param-value>
+    </init-param>
+    
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>WebXmlServlet</servlet-name>
+	    <url-pattern>/webxml</url-pattern>
+	</servlet-mapping>
 </web-app>
